@@ -236,7 +236,7 @@ You chose the following sponsorship:
 
 -------------------------------------
 ".$strTypeName." name: ".$ItemName."
-Fee (no discount): ".number_format($intPriceAmount, 2, ',', ' ').": ".$strCurrency."
+Fee: ".number_format($intPriceAmount, 2, ',', ' ').": ".$strCurrency."
 Duration: ".$intDuration." month(s)
 
 More details: 
