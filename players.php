@@ -80,6 +80,7 @@ echo $head->setEndHead();
 <div id="ads_top"><?php show_ads("top_main"); ?></div>
 <div id="layout" class="longer">
   
+  <?php require_once("inc/bar_login.inc"); ?>
   <div id="logo"><?php require_once("inc/logo.inc"); ?></div>
   <div id="menu"><?php require_once("inc/menu.inc"); ?></div>
   <div id="main">
@@ -112,76 +113,9 @@ echo $head->setEndHead();
          </div>
 
          <?php
-         if ($_GET['test']==1 OR $_GET['preview']==1){
-
-          
-          if ($_GET['preview']==1){
-              echo '<div id="sponsorship_show_header">This profile is sponsored by:</div>
-              <div id="sponsorship_show">';
-              $id_ads=$input->check_number($_GET['id_ads']);
-              $query="SELECT * from sponsorship_ads WHERE id=".$id_ads."";
-              if ($con->GetQueryNum($query)>0){
-                $result = $con->SelectQuery($query);
-                $write = $result->fetch_array();
-                $strAds="";
-                      switch ($write['id_type']) {
-                        case 2:
-                          if (!empty($write['id_image'])){
-                            $strImagePath=PhotoFolder."/sponsorship/sponsorship_".$write['id'].".jpg";
-                            if (file_exists($strImagePath)) {
-                               $strAds= '<img src="/'.$strImagePath.'" alt="'.$write['name'].'" />';
-                            }
-                          }
-                        break;
-                        case 1:
-                          $strAds=$write['html_text'];
-                        break;
-                      }
-                    if (!empty($write['url'])){ echo '<a onclick="return !window.open(this.href);" href="'.$input->check_external_link($write['url']).'">';}
-                    echo $strAds;
-                    if (!empty($write['url'])){ echo '</a>';}
-              }
-              echo '</div>';
-
-          }else{
-            $query="SELECT * from sponsorship WHERE id_type=3 AND id_item=".$id." AND ( (date_expire>=NOW() AND id_status=2) OR (id_status=1) )";
-            if ($con->GetQueryNum($query)>0){
-
-              $query="SELECT sponsorship_ads.* from sponsorship INNER JOIN sponsorship_ads ON sponsorship.id_ads=sponsorship_ads.id WHERE sponsorship.id_type=3 AND sponsorship.id_item=".$id." AND ( (sponsorship.date_expire>=NOW() AND sponsorship.id_status=2))";
-              if ($con->GetQueryNum($query)>0){
-                $result = $con->SelectQuery($query);
-                $write = $result->fetch_array();
-                $strAds="";
-                 echo '<div id="sponsorship_show">';
-                      switch ($write['id_type']) {
-                        case 2:
-                          if (!empty($write['id_image'])){
-                            $strImagePath=PhotoFolder."/sponsorship/sponsorship_".$write['id'].".jpg";
-                            if (file_exists($strImagePath)) {
-                               $strAds= '<img src="/'.$strImagePath.'" alt="'.$write['name'].'" />';
-                            }
-                          }
-                        break;
-                        case 1:
-                          $strAds=$write['html_text'];
-                        break;
-                      }
-                    if (!empty($write['url'])){ echo '<a onclick="return !window.open(this.href);" href="'.$input->check_external_link($write['url']).'">';}
-                    echo $strAds;
-                    if (!empty($write['url'])){ echo '</a>';}
-                 echo '</div>';                    
-              }
-              
-            }else{
-              echo '<div id="sponsorship_show">';
-              echo '<div class="center bold">Want your name or logo seen here? <a href="/sponsorship/'.get_url_text($StrName,$id).'?id_type=3" title="Sponsor this profile">Sponsor this profile</a>.</div>';
-              echo '</div>';                    
-            }
-
-          }
-         
-         }
-         ?>
+         //sponsorship
+         show_sponsorship($id,$StrName,3);
+          ?>
          
          <div class="space">&nbsp;</div>
          

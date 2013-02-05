@@ -4,6 +4,7 @@ require_once("../inc/init.inc");
 // nastaveni uz. prav stranky = IDskupinyPrav/read/add/update/delete
 $users->setUserRight(33,1,1,0,0);
 $input = new Input_filter();
+$games = new games($con);
 
 require_once("inc/head.inc");
 echo $head->setTitle(langGlogalTitle."Set sponsorship as paid");

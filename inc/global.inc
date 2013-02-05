@@ -361,12 +361,88 @@ function check_login($boolRedirect) {
   return $strUserArray; 
 }     
 
+function show_sponsorship ($id,$StrName,$intIdType){
+
+            global $con,$input;
+
+            if ($_GET['preview']==1){
+              echo '<div id="sponsorship_show_header">This profile is sponsored by:</div>
+              <div id="sponsorship_show">';
+              $id_ads=$input->check_number($_GET['id_ads']);
+              $query="SELECT * from sponsorship_ads WHERE id=".$id_ads."";
+              if ($con->GetQueryNum($query)>0){
+                $result = $con->SelectQuery($query);
+                $write = $result->fetch_array();
+                $strAds="";
+                      switch ($write['id_type']) {
+                        case 2:
+                          if (!empty($write['id_image'])){
+                            $strImagePath=PhotoFolder."/sponsorship/sponsorship_".$write['id'].".jpg";
+                            if (file_exists($strImagePath)) {
+                               $strAds= '<img src="/'.$strImagePath.'" alt="'.$write['name'].'" />';
+                            }
+                          }
+                        break;
+                        case 1:
+                          $strAds=$write['html_text'];
+                        break;
+                      }
+                    if (!empty($write['url'])){ echo '<a onclick="return !window.open(this.href);" href="'.$input->check_external_link($write['url']).'">';}
+                    echo $strAds;
+                    if (!empty($write['url'])){ echo '</a>';}
+              }
+              echo '</div>';
+
+            }else{
+
+              $query="SELECT * from sponsorship WHERE id_type=".$intIdType." AND id_item=".$id." AND ( (date_expire>=NOW() AND id_status=2) OR (id_status=1) )";
+              //echo $query;
+              if ($con->GetQueryNum($query)>0){
+
+              $query="SELECT sponsorship_ads.* from sponsorship INNER JOIN sponsorship_ads ON sponsorship.id_ads=sponsorship_ads.id WHERE sponsorship.id_type=".$intIdType." AND sponsorship.id_item=".$id." AND ( (sponsorship.date_expire>=NOW() AND sponsorship.id_status=2))";
+              if ($con->GetQueryNum($query)>0){
+                $result = $con->SelectQuery($query);
+                $write = $result->fetch_array();
+                $strAds="";
+                 echo '<div id="sponsorship_show_header">This profile is sponsored by:</div>';
+                 echo '<div id="sponsorship_show">';
+                      switch ($write['id_type']) {
+                        case 2:
+                          if (!empty($write['id_image'])){
+                            $strImagePath=PhotoFolder."/sponsorship/sponsorship_".$write['id'].".jpg";
+                            if (file_exists($strImagePath)) {
+                               $strAds= '<img src="/'.$strImagePath.'" alt="'.$write['name'].'" />';
+                            }
+                          }
+                        break;
+                        case 1:
+                          $strAds=$write['html_text'];
+                        break;
+                      }
+                    if (!empty($write['url'])){ echo '<a onclick="return !window.open(this.href);" href="'.$input->check_external_link($write['url']).'">';}
+                    echo $strAds;
+                    if (!empty($write['url'])){ echo '</a>';}
+                 echo '</div>';                    
+              }
+              
+            }else{
+              echo '<div id="sponsorship_show">';
+              echo '<div class="center bold">Want your name or logo seen here? <a href="/sponsorship/'.get_url_text($StrName,$id).'?id_type='.$intIdType.'" title="Sponsor this profile">Sponsor this profile</a>.</div>';
+              echo '</div>';                    
+            }
+
+            }
+         
+
+         }
+
+
 session_start();
 
 $input = new Input_filter();
 $games = new games($con);
 require_once(IncludeAdminPath."/inc/class/class_web_users.php");
 $web_users = new web_users($con);
-
+$strUserArray=check_login(0);
 
 ?>

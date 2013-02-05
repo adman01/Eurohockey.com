@@ -57,6 +57,7 @@ URL: '.$link.'';
 <div id="ads_top"><?php show_ads("top_main"); ?></div>
 <div id="layout" class="longer">
   
+  <?php require_once("inc/bar_login.inc"); ?>
   <div id="logo"><?php require_once("inc/logo.inc"); ?></div>
   <div id="menu"><?php require_once("inc/menu.inc"); ?></div>
   <div id="main">

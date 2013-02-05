@@ -188,7 +188,7 @@ echo $head->setEndHead();
               echo '<tr>';
               $result = $con->SelectQuery($query);
               while($write = $result->fetch_array()){
-                  echo '<td>'.number_format($write['price_'.$id_type], 2, ',', ' ').''.$write['name'].'</td>';
+                  echo '<td>'.number_format($write['price_'.$id_type], 2, ',', ' ').'</td>';
               }
               echo '</tr>';
               echo '<tr>';

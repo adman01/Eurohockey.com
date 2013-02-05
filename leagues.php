@@ -115,6 +115,7 @@ echo $head->setEndHead();
 <div id="ads_top"><?php show_ads("top_main"); ?></div>
 <div id="layout" class="shorter">
   
+  <?php require_once("inc/bar_login.inc"); ?>
   <div id="logo"><?php require_once("inc/logo.inc"); ?></div>
   <div id="menu"><?php require_once("inc/menu.inc"); ?></div>
   <div id="main">
@@ -189,6 +190,13 @@ echo $head->setEndHead();
             
             <div class="clear">&nbsp;</div>
          </div>
+         <div class="clear">&nbsp;</div>
+
+         <?php
+         //sponsorship
+         show_sponsorship($id,$StrLeagueName,1);
+         ?>
+
          <div class="space">&nbsp;</div>
          
          <div id="item_logo">
