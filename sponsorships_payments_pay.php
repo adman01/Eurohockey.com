@@ -88,7 +88,7 @@ echo $head->setEndHead();
       $paypal_email=DEFAULT_PAYPAL_ID;
       
       echo '
-      <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <div class="center">
         <input name="cmd" type="hidden" value="_xclick" />
         <input name="no_note" type="hidden" value="1" />
