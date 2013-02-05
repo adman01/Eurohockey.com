@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin
+Disallow: /xml
+Disallow: /photo
+Disallow: /temp

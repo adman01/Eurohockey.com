@@ -1,0 +1,96 @@
+body {
+	font-family:  sans-serif;
+	font-size: 12px;
+	color: #000000;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background: #ffffff;
+}
+
+/* --- zakladni html prvky ---*/
+em, i						{font-style: normal;}
+hr							{display: block; clear: both; color: #000000;	border-width: 0px;}
+p 							{text-align: justify; margin: 0px 0px 5px 0px; line-height: 1.5em;}
+
+/* --- odkazy (rozsireno o ikonky typu souboru) --- */
+a 						{color: #000000; text-decoration: underline;}
+a:hover 				{color: #000000; text-decoration: none;}
+
+/* --- seznamy --- */
+ul						{list-style: none; margin: 5px 0px 5px 15px; padding: 0px; text-align: left;}
+ol						{padding: 4px 0px 0px 5px;}
+
+/* --- obrazky --- */
+img 					{border: 0px;}
+img.border 			{padding: 2px; border: 1px solid #000000;}
+img.icon				{vertical-align: -3px; margin: 0px 3px 0px 1px;}
+img.toleft			{margin-right: 10px;}
+img.toright			{margin-left: 10px;}
+
+/* --- horni a dolni indexy --- */
+sub, sup 			{vertical-align: baseline; position: relative;}
+sub 					{top: 0.4em;}
+sup 					{bottom: 0.4em;}
+
+/* --- tabulky --- */
+table.nice						{width: 950px; font-size: 12px; }
+table.nice tr td 				{padding: 2px;	line-height: 2em;}
+table.nice tr td.item		{background: #0E88C7; color:white; font-weight: bold; width: 250px;}
+table.nice tr td.item a		{color: #FFFFFF;}
+table.nice tr th				{background: #084385; border-top: 1px solid #000000; border-bottom: 1px solid #000000; color:white; font-weight: bold; padding: 5px;text-align: left;}
+
+
+table.medium					{width: 350px;}
+
+/* --- hlavicky --- */
+h1, h2, h3, h4, h5, h6 		{clear: both; color: #000000; font-size: 14px; margin: 0px; line-height: 1.5em;}
+h1									{padding: 0px;	margin: 5px 0px 5px 0px; font-size: 18px;}
+h2									{padding: 0px;	margin: 5px 0px 5px 0px; font-size: 16px;}
+h3 								{margin: 10px 0px 10px 0px;}
+h4									{}
+h2 span							{display: none;}
+h3 span							{display: none;}
+
+/* --- formulare --- */
+input				{}
+form				{margin: 0px; padding: 0px;}
+legend			{padding: 3px;	color: White;	background-color: #72376F;}
+legend a			{color: White; font-weight: normal;}
+legend a:hover	{	color: White;}
+
+/* --- globalni tridy --- */
+.clear			{clear: both; font-size: 0px;}
+.smaller			{font-size: 0.85em;}
+.small 			{font-size: 0.8em;}
+.gray 			{color: #686868;}
+.blue 			{color: #004080;}
+.red				{color: #9f0000;}
+.green			{color: #008000;}
+.right 			{text-align: right;}
+.center			{text-align: center;}
+.left				{text-align: left;}
+.toblock			{text-align: justify;}
+.toleft			{display: block; float: left;	text-align: left;}
+.toright			{display: block; float: right; text-align: left;}
+.nomargin		{margin: 0px;}
+.nobold			{font-weight: normal;}
+.error			{display: block; color: #000000; font-weight: bold; text-align: center; padding-top: 10px;}
+.error a			{color: #000000;}
+.hidden			{display: none;}
+.border			{border: 1px solid #993333; padding:7px;}
+
+/* --- layout webu --- */
+
+#layout								{width: 100%; line-height: 2em;}
+#layout #logo						{display: none;}
+#layout #logo_date				{display: none;}
+#layout #menu 						{display: none;}
+#layout #partners				{display: none;}
+#layout #bottom					{display: none;}
+
+#layout #main #text					{text-align: justify; line-height: 1.5em;}
+#layout #main #text table			{width: 100%;}
+#layout #main #text table tr td	{padding: 3px;}
+#layout #main #text table tr td.item			{white-space: nowrap; font-weight: bold;}
+

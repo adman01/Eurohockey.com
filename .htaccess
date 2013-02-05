@@ -1,0 +1,118 @@
+ErrorDocument 404 /404.html
+DirectoryIndex index.php
+RewriteEngine on
+RewriteBase /
+Options +FollowSymlinks
+
+RewriteRule ^admin(/)?$ /admin/index.php [R]
+
+RewriteRule ^news.html$ /news_archive.php [QSA]
+RewriteRule ^news.html/$ /news_archive.php [QSA]
+RewriteRule ^news-show/([a-zA-Z0-9\-]+)\.html$ /news.php?id=$1 [QSA]
+RewriteRule ^news-show/([a-zA-Z0-9\-]+)\.html/$ /news.php?id=$1 [QSA]
+
+RewriteRule ^articles.html$ /articles_archive.php [QSA]
+RewriteRule ^articles.html/$ /articles_archive.php [QSA]
+RewriteRule ^article/([a-zA-Z0-9\-]+)\.html$ /articles.php?id=$1 [QSA]
+RewriteRule ^article/([a-zA-Z0-9\-]+)\.html/$ /articles.php?id=$1 [QSA]
+
+RewriteRule ^text/([a-zA-Z0-9\-]+)\.html$ /show_text.php?id=$1 [QSA]
+RewriteRule ^text/([a-zA-Z0-9\-]+)\.html/$ /show_text.php?id=$1 [QSA]
+
+RewriteRule ^country/([a-zA-Z0-9\-]+)\.html$ /countries.php?id=$1 [QSA]
+RewriteRule ^country/([a-zA-Z0-9\-]+)\.html/$ /countries.php?id=$1 [QSA]
+RewriteRule ^countries.html$ /countries_list.php [QSA]
+RewriteRule ^countries.html/$ /countries_list.php [QSA]
+
+RewriteRule ^leagues.html$ /leagues_list.php [QSA]
+RewriteRule ^leagues.html/$ /leagues_list.php [QSA]
+RewriteRule ^league/([a-zA-Z0-9\-]+)\.html$ /leagues.php?id=$1 [QSA]
+RewriteRule ^league/([a-zA-Z0-9\-]+)\.html/$ /leagues.php?id=$1 [QSA]
+
+RewriteRule ^clubs.html$ /clubs_list.php [QSA]
+RewriteRule ^clubs.html/$ /clubs_list.php [QSA]
+RewriteRule ^club/([a-zA-Z0-9\-]+)\.html$ /clubs.php?id=$1 [QSA]
+RewriteRule ^club/([a-zA-Z0-9\-]+)\.html/$ /clubs.php?id=$1 [QSA]
+
+RewriteRule ^national-history/([a-zA-Z0-9\-]+)\.html$ /national_history.php?id=$1 [QSA]
+RewriteRule ^national-history/([a-zA-Z0-9\-]+)\.html/$ /national_history.php?id=$1 [QSA]
+RewriteRule ^national-season/([a-zA-Z0-9\-]+)\.html$ /national_season.php?id=$1 [QSA]
+RewriteRule ^national-season/([a-zA-Z0-9\-]+)\.html/$ /national_season.php?id=$1 [QSA]
+
+RewriteRule ^transfers.html$ /transfers_list.php [QSA]
+RewriteRule ^transfers.html/$ /transfers_list.php [QSA]
+
+RewriteRule ^image/([a-zA-Z0-9\-]+)-([a-zA-Z0-9\-]+)-([a-zA-Z0-9\-]+)-([a-zA-Z0-9\_./]+)?$ /show_img.php?width=$1&height=$2&ratio=$3&filename=$4 [QSA]
+RewriteRule ^flag/([a-zA-Z0-9\-]+)-([a-zA-Z0-9\-]+)-([a-zA-Z0-9\-]+)-([a-zA-Z0-9\_./]+)?$ /show_img_flags.php?width=$1&height=$2&ratio=$3&filename=$4 [QSA]
+
+RewriteRule ^players.html$ /players_list.php [QSA]
+RewriteRule ^players.html/$ /players_list.php [QSA]
+RewriteRule ^player/([a-zA-Z0-9\-]+)\.html$ /players.php?id=$1 [QSA]
+RewriteRule ^player/([a-zA-Z0-9\-]+)\.html/$ /players.php?id=$1 [QSA]
+RewriteRule ^player/draft/([0-9\-]+)\.html$ /players_draft.php?id=$1 [QSA]
+RewriteRule ^player/draft/([0-9\-]+)\.html/$ /players_draft.php?id=$1 [QSA]
+                                                                   
+RewriteRule ^games.html$ /games_list.php [QSA]
+RewriteRule ^games.html/$ /games_list.php [QSA]
+RewriteRule ^game/detail/([a-zA-Z0-9\-]+)\.html$ /games.php?id=$1 [QSA]
+RewriteRule ^game/detail/([a-zA-Z0-9\-]+)\.html/$ /games.php?id=$1 [QSA]
+
+RewriteRule ^stats/league/([0-9\-]+)/([a-zA-Z0-9\-]+)\.html$ /stats_leagues.php?season=$1&id=$2 [QSA]
+RewriteRule ^stats/league/([0-9\-]+)/([a-zA-Z0-9\-]+)\.html/$ /stats_leagues.php?season=$1&id=$2 [QSA]
+
+RewriteRule ^stats/league-all-time/([a-zA-Z0-9\-]+)\.html$ /stats_leagues_all_time.php?id=$1 [QSA]
+RewriteRule ^stats/league-all-time/([a-zA-Z0-9\-]+)\.html/$ /stats_leagues_all_time.php?id=$1 [QSA]
+
+RewriteRule ^stats/league_records/([a-zA-Z0-9\-]+)\.html$ /stats_leagues_history.php?id=$1 [QSA]
+RewriteRule ^stats/league_records/([a-zA-Z0-9\-]+)\.html/$ /stats_leagues_history.php?id=$1 [QSA]
+
+RewriteRule ^stats/club/([0-9\-]+)/([a-zA-Z0-9\-]+)\.html$ /stats_clubs.php?season=$1&id=$2 [QSA]
+RewriteRule ^stats/club/([0-9\-]+)/([a-zA-Z0-9\-]+)\.html/$ /stats_clubs.php?season=$1&id=$2 [QSA]
+
+RewriteRule ^arenas.html$ /arenas_list.php [QSA]
+RewriteRule ^arenas.html/$ /arenas_list.php [QSA]
+RewriteRule ^arena/([a-zA-Z0-9\-]+)\.html$ /arenas.php?id=$1 [QSA]
+RewriteRule ^arena/([a-zA-Z0-9\-]+)\.html/$ /arenas.php?id=$1 [QSA]
+
+RewriteRule ^fan-forum.html$ /fan-forum.php [QSA]
+RewriteRule ^fan-forum.html/$ /fan-forum.php [QSA]
+
+RewriteRule ^sponsorship.html$ /sponsorships.php [QSA]
+RewriteRule ^sponsorship.html/$ /sponsorships.php [QSA]
+RewriteRule ^sponsorship/([a-zA-Z0-9\-]+)\.html$ /sponsorships.php?id=$1 [QSA]
+RewriteRule ^sponsorship/([a-zA-Z0-9\-]+)\.html/$ /sponsorships.php?id=$1 [QSA]
+RewriteRule ^sponsorship-action/([a-zA-Z0-9\-]+)\.html$ /sponsorships_action.php?action=$1 [QSA]
+RewriteRule ^sponsorship-action/([a-zA-Z0-9\-]+)\.html/$ /sponsorships_action.php?action=$1 [QSA]
+RewriteRule ^sponsorship-item/([a-zA-Z0-9\-]+)\.html$ /sponsorships_item.php?id=$1 [QSA]
+RewriteRule ^sponsorship-item/([a-zA-Z0-9\-]+)\.html/$ /sponsorships_item.php?id=$1 [QSA]
+RewriteRule ^sponsorship-update/([a-zA-Z0-9\-]+)\.html$ /sponsorships_update.php?id=$1 [QSA]
+RewriteRule ^sponsorship-update/([a-zA-Z0-9\-]+)\.html/$ /sponsorships_update.php?id=$1 [QSA]
+RewriteRule ^sponsorship-ads.html$ /sponsorships_ads.php [QSA]
+RewriteRule ^sponsorship-ads.html/$ /sponsorships_ads.php [QSA]
+RewriteRule ^sponsorship-ads-update/([a-zA-Z0-9\-]+)\.html$ /sponsorships_ads_update.php?id=$1 [QSA]
+RewriteRule ^sponsorship-ads-update/([a-zA-Z0-9\-]+)\.html/$ /sponsorships_ads_update.php?id=$1 [QSA]
+RewriteRule ^sponsorship-payments.html$ /sponsorships_payments.php [QSA]
+RewriteRule ^sponsorship-payments.html/$ /sponsorships_payments.php [QSA]
+RewriteRule ^sponsorship-payments/([a-zA-Z0-9\-]+)\.html$ /sponsorships_payments_pay.php?id=$1 [QSA]
+RewriteRule ^sponsorship-payments/([a-zA-Z0-9\-]+)\.html/$ /sponsorships_payments_pay.php?id=$1 [QSA]
+
+
+RewriteRule ^user-register-action/([a-zA-Z0-9\-]+)\.html$ /user_register_action.php?action=$1 [QSA]
+RewriteRule ^user-register-action/([a-zA-Z0-9\-]+)\.html/$ /user_register_action.php?action=$1 [QSA]
+RewriteRule ^user-login.html$ /user_register_login.php [QSA]
+RewriteRule ^user-login.html/$ /user_register_login.php [QSA]
+RewriteRule ^user-login-forgot-password.html$ /user_register_forgot_password.php [QSA]
+RewriteRule ^user-login-forgot-password.html/$ /user_register_forgot_password.php [QSA]
+RewriteRule ^user-logout.html$ /user_register_action.php?action=logout [QSA]
+RewriteRule ^user-logout.html/$ /user_register_action.php?action=logout [QSA]
+RewriteRule ^user-update.html$ /user_register_update.php [QSA]
+RewriteRule ^user-update.html/$ /user_register_update.php [QSA]
+
+RewriteRule ^feedback.html$ /feedback.php [QSA]
+RewriteRule ^feedback.html/$ /feedback.php [QSA]
+
+RewriteRule ^([a-zA-Z0-9\-]+)$ /index.php [QSA]
+RewriteRule ^([a-zA-Z0-9\-]+)\$ /index.php [QSA]
+RewriteRule ^([a-zA-Z0-9\-]+)\/$ /show_text.php?id=1 [QSA]
+RewriteRule ^([a-zA-Z0-9\-]+)\.html$ /show_text.php?id=1 [QSA]
+RewriteRule ^([a-zA-Z0-9\-]+)\.html/$ /show_text.php?id=1 [QSA]

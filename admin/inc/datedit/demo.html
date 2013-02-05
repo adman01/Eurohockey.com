@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="cs" />
+  <meta http-equiv="Author" content="ITPro CZ - www.itpro.cz" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="datedit/datedit.css" type="text/css" media="screen" />
+  <!-- Datedit by Ivo Skalicky - ITPro CZ - http://www.itpro.cz -->
+  <script type="text/javascript" charset="iso-8859-1" src="datedit/datedit.js"></script>
+  <script type="text/javascript" charset="utf-8" src="datedit/lang/cz.js"></script>
+  <script type="text/javascript">
+    datedit("demo1","d.m.yyyy");
+    datedit("demo2","d/m/yyyy");
+    datedit("demo3","m/d/yyyy");    
+    datedit("demo4");
+    datedit("demo5","yyyy-mm-dd HH:MM:SS");
+    datedit("demo6","d.m.yyyy HH:MM");
+    datedit("demo7","d.m.yyyy",false);
+  </script>
+        
+  <title>Datedit - Javascript Date picker</title>
+ </head>
+ <body>
+  <div id="page">
+  <h1>Datedit - Javascript Date picker<br /><small>by Ivo Skalicky - ITPro CZ (http://www.itpro.cz)</small></h1>
+  <form id="example_form" method="get" action="#">
+   <fieldset><legend>Demonstrační formulář komponenty datedit</legend>
+    <table>
+     <tr>
+      <td><label for="demo1">České datum:</label></td>
+      <td><input type="text" size="16" name="demo1" id="demo1" value="25.3.1985" /></td>
+      <td><code>datedit("demo1","d.m.yyyy");</code></td>
+     </tr>
+     <tr>
+      <td><label for="demo2">Britské datum:</label></td>
+      <td><input type="text" size="16" name="demo2" id="demo2" value="25/3/1985" /></td>
+      <td><code>datedit("demo2","d/m/yyyy");</code></td>
+     </tr>
+     <tr>
+      <td><label for="demo3">Americké datum:</label></td>
+      <td><input type="text" size="16" name="demo3" id="demo3" value="3/25/1985" /></td>
+      <td><code>datedit("demo3","m/d/yyyy");</code></td>
+     </tr>
+     <tr>
+      <td><label for="demo4">ISO datum:</label></td>
+      <td><input type="text" size="16" name="demo4" id="demo4" value="1985-03-25" /></td>
+      <td><code>datedit("demo4");</code></td>
+     </tr>
+     <tr>
+      <td><label for="demo5">SQL datetime:</label></td>
+      <td><input type="text" size="16" name="demo5" id="demo5" value="1985-03-25 10:45:00" /></td>
+      <td><code>datedit("demo5","yyyy-mm-dd HH:MM:SS");</code></td>
+     </tr>
+     <tr>
+      <td><label for="demo6">České datum a čas:</label></td>
+      <td><input type="text" size="16" name="demo6" id="demo6" value="25.3.1985 10:45" /></td>
+      <td><code>datedit("demo6","d.m.yyyy HH:MM");</code></td>
+     </tr>
+     <tr>
+      <td><label for="demo7">Volba pouze kalendářem:</label></td>
+      <td><input type="text" size="16" name="demo7" id="demo7" value="" /></td>
+      <td><code>datedit("demo7","d.m.yyyy",false);</code></td>
+     </tr>
+    </table>
+   </fieldset>
+  </form>
+  <p>Tested on MSIE 6, MSIE 7, Mozilla Firefox 2, Opera 9</p> 
+  </div>
+ </body>
+</html>

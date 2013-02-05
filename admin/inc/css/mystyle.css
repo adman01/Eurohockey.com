@@ -1,0 +1,98 @@
+/* timyMCe prestylovani */
+#main .defaultSkin table {border: 0px;}
+#main .defaultSkin table tr {border: 0px;}
+#main .defaultSkin table tr td {border: 0px; padding: 0px;}
+#main .defaultSkin table {border: 0px;}
+#main .defaultSkin table.mceLayout {border: 1px solid #CCCCCC;}
+#main .defaultSkin table tr td.mceToolbar {border: 1px solid #CCCCCC;padding: 1px 1px 1px 5px;}
+#main .defaultSkin table tr td.mceStatusbar {border-top: 1px solid #CCCCCC;padding: 1px 1px 1px 1px;}
+#main .timy_controls_bottom {display: block; padding: 5px 0px 0px 0px;}
+#main label.err {padding: 0px 0px 0px 10px;}
+#main table tr td p {margin: 0px 0px 0px 0px;}
+
+#main-02 input.err, #main-02 select.err, #main-02 textarea.err {border:1px solid #DF0000; background:#FFB; color:#000;}
+#main-02 .err {color:#DF0000;}
+#main-02 label.err {display: block;}
+
+#main #listing3 {}
+#main #listing3 #listing_pages{float: left;}
+#main #listing3 #listing_pages .page {display: block; float: left; font-weight: bold; padding: 0px 2px 0px 5px;}
+#main #listing3 #listing_pages a{display: block; font-size: 12px; padding: 0px 2px 0px 2px; margin: 0px 1px 0px 1px; text-align: center; float: left;}
+#main #listing3 #listing_pages a:hover{}
+#main #listing3 #listing_pages a.selected {font-weight: bold; color: #DF0000;}
+#main #listing3 #listing_pages a.prev {font-weight: bold; padding: 0px 2px 0px 18px; margin: 0px 2px 0px 2px; background: url(../../inc/design/ico-arrow-left.gif) no-repeat  left 1px;}
+#main #listing3 #listing_pages a.next {font-weight: bold; padding: 0px 18px 0px 2px; margin: 0px 2px 0px 2px; background: url(../../inc/design/ico-arrow-right.gif) no-repeat  right 1px;}
+#main #listing3 #listing_pages_all{float: right;}
+
+#main #livesearch { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden; overflow: auto;}
+#main #livesearch a {display: block; padding: 2px 0px 3px 5px;}
+#main #livesearch a:hover {background: #FFFFBB;}
+
+#main .livesearch { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch a:hover {background: #FFFFBB;}
+#main table tr td .livesearch_window {position:absolute; width:150px; height:65px; top:5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_image { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_image a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_image a:hover {background: #FFFFBB;}
+#main .livesearch_image_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_image_folder { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_image_folder a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_image_folder a:hover {background: #FFFFBB;}
+#main .livesearch_image_folder_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_player { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_player a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_player a:hover {background: #FFFFBB;}
+#main .livesearch_player_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_game { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_game a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_game a:hover {background: #FFFFBB;}
+#main .livesearch_game_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_club { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_club a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_club a:hover {background: #FFFFBB;}
+#main .livesearch_club_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_arena { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_arena a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_arena a:hover {background: #FFFFBB;}
+#main .livesearch_arena_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_league { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_league a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_league a:hover {background: #FFFFBB;}
+#main .livesearch_league_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_club_stats { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_club_stats a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_club_stats a:hover {background: #FFFFBB;}
+#main .livesearch_club_stats_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_league_stats { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_league_stats a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_league_stats a:hover {background: #FFFFBB;}
+#main .livesearch_league_stats_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main .livesearch_players_stats { width : 300px; height: 150px; border : 1px solid #CFCFCF; padding: 0px 0px 0px 0px; position: absolute;top:35px; background: #ffffff; visibility: hidden;  overflow: auto;}
+#main .livesearch_players_stats a {display: block; padding: 2px 0px 3px 5px;}
+#main .livesearch_players_stats a:hover {background: #FFFFBB;}
+#main .livesearch_players_stats_window {position:absolute; width:200px; height:65px; top:-5px; left:50px; background:#FFFFFF; border:1px solid #0085CC; padding:5px 10px 5px 10px; z-index:500; visibility: hidden;}
+
+#main a.arrow-up {
+	display: block;
+	width: 15px;
+	height: 5px;
+	background: url(../../inc/design/arrow-up.gif) no-repeat  top center;
+}
+
+#main a.arrow-down {
+	display: block;
+	width: 15px;
+	height: 5px;
+	background: url(../../inc/design/arrow-down.gif) no-repeat  top center;
+}

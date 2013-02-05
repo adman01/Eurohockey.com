@@ -1,0 +1,11 @@
+#   directories   #
+###################
+_back/
+photo/
+temp/
+redactor_upload/
+xml/
+
+#   files   #
+###################
+inc/config.inc

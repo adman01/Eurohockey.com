@@ -1,0 +1,77 @@
+body {
+  font-family: 'Trebuchet MS', 'Geneva CE', lucida, sans-serif;
+  font-size: 12px;
+  background-color: #F0F0F0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000080;
+}
+
+a:hover {
+  color: #0000FF;
+}
+
+label {
+  display: block;
+  text-align: right;
+  font-weight: bolder;
+}
+
+input {
+  font-size: 14px;
+}
+
+legend {
+  color: #000000;
+}
+
+form {
+  margin: 0;
+}
+
+#page {
+  width: 800px;
+  margin: 0 auto;
+  border-left: 1px solid #E2E2E2;
+  border-right: 1px solid #E2E2E2;
+  background-color: #FFFFFF;
+  padding: 2ex 2em;
+}
+
+h1 {
+  line-height: 1;
+}
+
+h1 small {
+  font-size: 1.2ex;
+  margin-left: 5em;
+  color: #808080;
+}
+
+h2 {
+  margin: 1ex 0;
+  border-bottom: 1px solid #808080;
+}
+
+pre {
+  margin: 0;
+}
+
+table code {
+  margin-left: 2em;
+}
+
+table.list td code {
+  margin: 0;
+}
+
+table.list td {
+  padding: 1ex 1em;
+}
+
+td {
+  vertical-align: top;
+}
